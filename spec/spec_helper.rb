@@ -11,10 +11,10 @@ SimpleCov.start
 set :backend, :ssh
 host = 'default'
 `vagrant up #{host}`
-config = Tempfile.new('', Dir.tmpdir)
-config.write(`vagrant ssh-config #{host}`)
-config.close
-options = Net::SSH::Config.for(host, [config.path])
+ssh_config = Tempfile.new('', Dir.tmpdir)
+ssh_config.write(`vagrant ssh-config #{host}`)
+ssh_config.close
+options = Net::SSH::Config.for(host, [ssh_config.path])
 options[:user] ||= Etc.getlogin
 set :host,        options[:host_name] || host
 set :ssh_options, options
