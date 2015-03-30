@@ -1,6 +1,7 @@
 # Instructions
 
 Install Gem Dependencies
+    
     bundle install
 
 Install Omnibus Vagrant plugin:
