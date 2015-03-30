@@ -1,6 +1,6 @@
 # Instructions
 
-Install Omnibus Vagrant plugins:
+Install Omnibus Vagrant plugin:
 
     vagrant plugin install vagrant-omnibus
 
